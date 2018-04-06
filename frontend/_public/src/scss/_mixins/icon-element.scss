@@ -1,0 +1,23 @@
+/*
+Icon-element mixin
+=====================================================
+This mixin provides you a method to set any webfont icon from the Shopware icon-set as a before element.
+
+######Example:
+`@include icon-element([icon-name], [icon-size]);`
+*/
+
+@mixin icon-element($listIcon: $sw-icon-record, $listIconSize: 10)
+{
+    position: relative;
+
+    &:before {
+        @include unitize-width(20, 16);
+        @include unitize($listIconSize, 16, font-size);
+        @include unitize(-20, 16, left);
+        font-family: $sw-icon-fontname;
+        content: "#{$listIcon}";
+        position: absolute;
+        top: 0;
+    }
+}

@@ -1,0 +1,43 @@
+/*
+Mixins
+==================================================
+The `mixins.less` file contains the imports to all mixin documents that simplify the work with Shopware.
+
+Mixin specific documentation can be found inside each mixin file.
+
+Mixins can be used by adding the mixin class onto an element inside Shopware.
+
+**Example:**<br/>
+`@include border-radius(3px);`
+*/
+
+@import "_mixins/icon-element";
+@import "_mixins/linear-gradient";
+@import "_mixins/visibility-helper";
+
+// Bare
+@import "_mixins/common/animation";
+@import "_mixins/common/appearance";
+@import "_mixins/common/backface-visibility";
+@import "_mixins/common/border-radius";
+@import "_mixins/common/box-shadow";
+@import "_mixins/common/box-sizing";
+@import "_mixins/common/clear-button-style";
+@import "_mixins/common/clearfix";
+@import "_mixins/common/column-count";
+@import "_mixins/common/cursor";
+@import "_mixins/common/hyphens";
+@import "_mixins/common/keyframes";
+@import "_mixins/common/linear-gradient";
+@import "_mixins/common/opacity";
+@import "_mixins/common/rotate";
+@import "_mixins/common/scale";
+@import "_mixins/common/tap-highlight-color";
+@import "_mixins/common/touch-callout";
+@import "_mixins/common/transform-origin";
+@import "_mixins/common/transform-style";
+@import "_mixins/common/transform";
+@import "_mixins/common/transition";
+@import "_mixins/common/translate";
+@import "_mixins/common/unitize";
+@import "_mixins/common/user-select";

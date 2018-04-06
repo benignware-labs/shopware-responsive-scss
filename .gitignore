@@ -1,0 +1,13 @@
+# Mac OS
+.DS_Store
+
+# Composer
+composer.phar
+vendor
+
+# Node
+node_modules
+npm-debug.log
+
+# Parcel
+.cache

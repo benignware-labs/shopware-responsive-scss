@@ -1,0 +1,54 @@
+---
+version: '3'
+
+services:
+  db:
+    environment:
+      MYSQL_ROOT_PASSWORD: shopware
+      MYSQL_PASSWORD: shopware
+      MYSQL_USER: shopware
+      MYSQL_DATABASE: shopware
+    image: mysql:5.7
+    volumes:
+    - db_data:/var/lib/mysql
+    restart: always
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    environment:
+      PMA_ARBITRARY: 1
+    restart: always
+    ports:
+     - 7771:80
+    volumes:
+     - /sessions
+  shopware:
+    image: kurthuwig/shopware:latest
+
+    environment:
+     # hier bitte ein eigenes Passwort verwenden
+     - PHPMYADMIN_PW=shopware
+
+     # Vorgabewerte für den Datenbankzugriff
+     - DB_USER=shopware
+     - DB_PASSWORD=shopware
+     - DB_DATABASE=shopware
+     - DB_HOST=db
+     - DB_PORT=3306
+
+    volumes:
+     - shopware:/var/www/html
+     - ./:/var/www/html/themes/Frontend/ResponsiveSCSS
+    links:
+     - db
+    ports:
+     - "7777:80"
+  node:
+    build: .
+    command: npm start
+    working_dir: /var/www/html/themes/Frontend/ResponsiveSCSS
+    volumes:
+      - ./:/var/www/html/themes/Frontend/ResponsiveSCSS
+      - /var/www/html/themes/Frontend/ResponsiveSCSS/node_modules
+volumes:
+  db_data:
+  shopware:

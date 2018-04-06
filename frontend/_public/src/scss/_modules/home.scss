@@ -1,0 +1,17 @@
+/*
+Home
+==============================================
+Defines the styling of the home-page content elements.
+*/
+
+.content--home {
+    @include unitize(margin-top, 20);
+
+    @media screen and (min-width: $tabletViewportWidth) {
+        @include unitize(margin-top, 30);
+    }
+
+    @media screen and (min-width: $desktopViewportWidth) {
+        @include unitize(margin-top, 50);
+    }
+}

@@ -1,0 +1,19 @@
+{
+  "minify": true,
+  "options": [
+    "domPrefixes",
+    "prefixes",
+    "hasEvent",
+    "mq",
+    "testAllProps",
+    "testProp",
+    "testStyles",
+    "setClasses"
+  ],
+  "feature-detects": [
+    "test/history",
+    "test/css/animations",
+    "test/storage/localstorage",
+    "test/storage/sessionstorage"
+  ]
+}

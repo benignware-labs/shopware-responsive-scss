@@ -1,0 +1,14 @@
+@mixin primary-gradient()
+{
+    @include linear-gradient($brand-primary-light, $brand-primary);
+}
+
+@mixin secondary-gradient()
+{
+    @include linear-gradient($brand-secondary, $brand-secondary-dark);
+}
+
+@mixin white-gradient()
+{
+    @include linear-gradient(#fff, $gray-light);
+}

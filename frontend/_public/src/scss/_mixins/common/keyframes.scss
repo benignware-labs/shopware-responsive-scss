@@ -1,0 +1,48 @@
+/*
+Keyframe mixin
+=============================================
+The mixins provides you a cross-browser compatible method to set a keyframe.
+
+Please refer to <http://caniuse.com/#search=keyframe> to see the browser support table of the feature.
+
+######Example:
+`@include keyframes([name-value], [frames-value]);`
+
+`$param: {String} name: The keyframe animation name`<br/>
+`$param: {String} roules: the animation frames`
+*/
+
+// @mixin keyframes($name, $roules) {
+//   @-webkit-keyframes #{$name} {
+//       #{$roules}
+//   }
+//   @keyframes #{$name} {
+//       #{$roules}
+//   }
+// };
+
+// #{$keyframe}--spin: {
+//   from {
+//       @include rotate(0);
+//   }
+//   to {
+//       @include rotate(360deg);
+//   }
+// }
+//
+// #{$keyframe}--spin-reverse: {
+//     from {
+//         @include rotate(360deg);
+//     }
+//     to {
+//         @include rotate(0);
+//     }
+// }
+//
+// @include keyframes($keyframe--spin, $keyframe--spin);
+//
+// @include keyframes($keyframe--spin-reverse, $keyframe--spin-reverse);
+
+@mixin indicator--relative($args...) {
+
+}
